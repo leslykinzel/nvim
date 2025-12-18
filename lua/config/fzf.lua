@@ -5,8 +5,10 @@ return {
     vim.env.FZF_DEFAULT_OPTS = "--no-preview"
     vim.g.fzf_layout = { window = "enew" }
     vim.g.fzf_preview_window = {}
-    vim.keymap.set("n", "<leader>ff", ":Files<CR>", { desc = "FZF: Files" })
-    vim.keymap.set("n", "<leader>fb", ":Buffers<CR>", { desc = "FZF: Buffers" })
-    vim.keymap.set("n", "<leader>rg", ":Rg<CR>", { desc = "FZF: Ripgrep" })
   end,
+  keys = {
+    { "<leader>ff", "<CMD>Files<CR>",   { desc = "Search files" } },
+    { "<leader>fb", "<CMD>Buffers<CR>", { desc = "Search buffers" } },
+    { "<leader>rg", "<CMD>rg<CR>",      { desc = "Ripgrep in cwd" } },
+  }
 }

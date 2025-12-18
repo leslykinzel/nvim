@@ -1,5 +1,6 @@
 return {
   "waiting-for-dev/ergoterm.nvim",
+  event = "VeryLazy",
   opts = {
     terminal_defaults = {
       start_in_insert = false,

@@ -1,5 +1,6 @@
 return {
   "nvim-mini/mini.move",
+  event = "VeryLazy",
   version = "*",
   opts = {
     mappings = {
