@@ -1,5 +1,6 @@
 return {
   "saghen/blink.cmp",
+  event = "VeryLazy",
   version = "*",
   opts = {
     keymap = {
