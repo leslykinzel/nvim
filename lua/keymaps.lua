@@ -1,8 +1,8 @@
 -- config.keymaps
 
 local default_opts = {
-    noremap = true,
-    silent  = true,
+  noremap = true,
+  silent  = true,
 }
 
 -- Window navigation
