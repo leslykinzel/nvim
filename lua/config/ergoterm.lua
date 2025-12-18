@@ -36,13 +36,7 @@ return {
       _G.numbered_tty[n]:toggle()
     end
 
-    -- Standard "terminal 0"
-    vim.keymap.set("n", "<leader>t0", function ()
-      toggle_term_id(0)
-    end, { noremap = true, silent = true })
-
-    -- Numbered floating terminals 1..=9
-    for i = 1, 9 do
+    for i = 0, 9 do
       vim.keymap.set("n", "<leader>t" .. i, function()
         toggle_term_id(i)
       end, { noremap = true, silent = true, desc = "Toggle terminal " .. i })
