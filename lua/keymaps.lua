@@ -26,5 +26,6 @@ vim.keymap.set("n", "<C-n>", ":set number!<CR>", default_opts)
 -- Go to normal mode from terminal mode
 vim.keymap.set("t", "<Esc>", "<C-\\><C-n>", default_opts)
 
+-- Put cursor at start of line while scrolling
 vim.keymap.set("n", "<C-e>", "<C-e>0", default_opts)
 vim.keymap.set("n", "<C-y>", "<C-y>0", default_opts)
