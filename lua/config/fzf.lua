@@ -7,8 +7,8 @@ return {
     vim.g.fzf_preview_window = {}
   end,
   keys = {
-    { "<leader>ff", "<CMD>Files<CR>",   { desc = "Search files" } },
-    { "<leader>fb", "<CMD>Buffers<CR>", { desc = "Search buffers" } },
-    { "<leader>rg", "<CMD>rg<CR>",      { desc = "Ripgrep in cwd" } },
+    { "<leader>f", "<CMD>Files<CR>",   { desc = "Search files" } },
+    { "<leader>b", "<CMD>Buffers<CR>", { desc = "Search buffers" } },
+    { "<leader>r", "<CMD>Rg<CR>",      { desc = "Ripgrep in cwd" } },
   }
 }
