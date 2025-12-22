@@ -23,6 +23,6 @@ return {
   },
   lazy = false,
   init = function()
-    vim.keymap.set("n", "-", ":Oil<CR>", { silent = true, desc = "Open parent directory" })
+    vim.keymap.set("n", "-", "<CMD>Oil<CR>", { silent = true, desc = "Open parent directory" })
   end,
 }

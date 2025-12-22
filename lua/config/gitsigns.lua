@@ -50,10 +50,4 @@ return {
       col = 1
     },
   },
-  init = function()
-    local bufopts = { noremap = true, silent = true }
-    vim.keymap.set("n", "<leader>gits", ":Gitsigns toggle_signs<CR>", bufopts)
-    vim.keymap.set("n", "<leader>gitw", ":Gitsigns toggle_word_diff<CR>", bufopts)
-    vim.keymap.set("n", "<leader>gitb", ":Gitsigns toggle_current_line_blame<CR>", bufopts)
-  end
 }
