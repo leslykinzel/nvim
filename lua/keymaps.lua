@@ -1,4 +1,4 @@
--- config.keymaps
+-- keymaps
 
 local default_opts = {
   noremap = true,

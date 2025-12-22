@@ -1,4 +1,4 @@
--- config.options
+-- options
 
 vim.cmd("colorscheme default")
 

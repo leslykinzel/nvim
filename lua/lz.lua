@@ -1,4 +1,4 @@
--- config.plugins
+-- lz
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
@@ -13,14 +13,4 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-require("lazy").setup({
-  require("config.fzf"),
-  require("config.oil"),
-  require("config.blink"),
-  require("config.treesitter"),
-  require("config.mason"),
-  require("config.gitsigns"),
-  require("config.mini-move"),
-  require("config.mini-align"),
-  require("config.ergoterm"),
-})
+require("lazy").setup("plugins")
