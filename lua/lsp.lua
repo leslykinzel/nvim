@@ -58,7 +58,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
     vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, bufopts)
     vim.keymap.set("n", "<F2>", vim.lsp.buf.rename, bufopts)
     vim.keymap.set("n", "K", vim.lsp.buf.hover, bufopts)
-    vim.keymap.set("n", "<leader>fmt", function()
+    vim.keymap.set("n", "<leader>==", function()
       vim.lsp.buf.format({ async = true })
     end, bufopts)
 
