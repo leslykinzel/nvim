@@ -1,7 +1,5 @@
 -- options
 
-vim.cmd("colorscheme default")
-
 vim.g.mapleader      = " "
 vim.opt.clipboard    = "unnamedplus"
 

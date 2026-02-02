@@ -18,9 +18,9 @@ return {
   root_markers = { ".git", "ols.json" },
   settings = {
     collections = {
-        { name = "core",   path = string.format("%s/core",   ODIN_ROOT) },
-        { name = "base",   path = string.format("%s/base",   ODIN_ROOT) },
-        { name = "vendor", path = string.format("%s/vendor", ODIN_ROOT) },
+      { name = "core",   path = string.format("%s/core",   ODIN_ROOT) },
+      { name = "base",   path = string.format("%s/base",   ODIN_ROOT) },
+      { name = "vendor", path = string.format("%s/vendor", ODIN_ROOT) },
     }
   },
 }
