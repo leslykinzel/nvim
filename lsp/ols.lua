@@ -15,7 +15,7 @@ ODIN_ROOT = get_odin_root()
 return {
   cmd = { "ols", "--stdio" },
   filetypes = { "odin" },
-  root_markers = { ".git", "ols.json" },
+  root_markers = { ".git", "ols.json", "odinfmt.json" },
   settings = {
     collections = {
       { name = "core",   path = string.format("%s/core",   ODIN_ROOT) },
