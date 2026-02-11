@@ -22,6 +22,7 @@ vim.opt.signcolumn   = "yes"
 vim.opt.scrolloff    = 8
 vim.opt.cmdheight    = 1
 vim.opt.cmdwinheight = 10
+vim.opt.wrap         = false
 
 -- Search
 vim.opt.incsearch    = true
