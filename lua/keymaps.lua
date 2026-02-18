@@ -18,6 +18,7 @@ vim.keymap.set("n", "<C-Left>", ":vertical resize -2<CR>", default_opts)
 vim.keymap.set("n", "<C-Right>", ":vertical resize +2<CR>", default_opts)
 
 -- Disable search highlights
+-- The default is <C-l> but I used that for navigating between windows.
 vim.keymap.set("n", "<Esc>", ":nohlsearch<CR>", default_opts)
 
 -- Toggle line numbers

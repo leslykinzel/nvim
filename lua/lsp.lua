@@ -44,23 +44,33 @@ vim.api.nvim_create_autocmd("LspAttach", {
       end
     end
 
-    vim.keymap.set("n", "<leader>el", toggle_virtual_lines, bufopts)
+    -- "Error x2" Toggle diagnostics
     vim.keymap.set("n", "<leader>ee", function()
       vim.diagnostic.enable(not vim.diagnostic.is_enabled())
-    end, bufopts)
+    end, bufopts) 
+
+    -- "Error Lines" Toggle virtual lines for diagnostics
+    vim.keymap.set("n", "<leader>el", toggle_virtual_lines, bufopts)
+
+    -- "Error Float" Open floating panel with diagnostic message(s)
     vim.keymap.set("n", "<leader>ef", function()
       vim.diagnostic.open_float()
     end, bufopts)
+
+    -- "Error Hints" Toggle inlay hints for type info and function arguments
     vim.keymap.set("n", "<leader>eh", function()
       vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
     end, bufopts)
+
+    -- Vim uses = to fix indentation so == is easy to remember
+    vim.keymap.set("n", "<leader>==", function()
+      vim.lsp.buf.format({ async = true })
+    end, bufopts)
+
     vim.keymap.set("n", "<leader>gr", vim.lsp.buf.references, bufopts)
     vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, bufopts)
     vim.keymap.set("n", "<F2>", vim.lsp.buf.rename, bufopts)
     vim.keymap.set("n", "K", vim.lsp.buf.hover, bufopts)
-    vim.keymap.set("n", "<leader>==", function()
-      vim.lsp.buf.format({ async = true })
-    end, bufopts)
 
     vim.diagnostic.config({
       signs = false,
