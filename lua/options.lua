@@ -24,6 +24,15 @@ vim.opt.scrolloff     = 8
 vim.opt.cmdheight     = 1
 vim.opt.cmdwinheight  = 10
 vim.opt.wrap          = false
+vim.opt.statusline    = string.format(
+  " %s %s %s %s %s %s ",
+  "%f",
+  "%m",
+  "%=",
+  "%{&fileencoding ? &fileencoding : &encoding}",
+  "%{&fileformat == 'dos' ? 'CRLF' : (&fileformat == 'unix' ? 'LF' : '&fileformat')}",
+  "%l:%c"
+)
 
 -- Search
 vim.opt.incsearch     = true
