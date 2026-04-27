@@ -29,7 +29,7 @@ return {
         end
 
         _G.numbered_tty[n] = ergoterm:new({
-          name = string.format("terminal_%d", n),
+          name = string.format("Terminal_%d", n),
           layout = layout,
         })
       end

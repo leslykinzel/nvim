@@ -1,7 +1,6 @@
 -- options
 
 vim.g.mapleader       = " "
-vim.opt.clipboard     = "unnamedplus"
 
 -- Indentation / Whitespace
 vim.opt.tabstop       = 4
@@ -21,9 +20,11 @@ vim.opt.showmode      = false
 vim.opt.mouse         = "a"
 vim.opt.signcolumn    = "yes"
 vim.opt.scrolloff     = 8
+vim.opt.sidescrolloff = 8
 vim.opt.cmdheight     = 1
 vim.opt.cmdwinheight  = 10
 vim.opt.wrap          = false
+vim.opt.smoothscroll  = true
 vim.opt.statusline    = string.format(
   " %s %s %s %s %s %s ",
   "%f",
@@ -38,3 +39,11 @@ vim.opt.statusline    = string.format(
 vim.opt.incsearch     = true
 vim.opt.ignorecase    = true
 vim.opt.smartcase     = true
+
+-- File handling
+vim.opt.encoding      = "UTF-8"
+vim.opt.backup        = false
+vim.opt.writebackup   = false
+vim.opt.swapfile      = false
+vim.opt.autoread      = true
+vim.opt.clipboard     = vim.env.SSH_TTY and "" or "unnamedplus"
