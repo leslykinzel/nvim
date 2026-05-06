@@ -37,16 +37,16 @@ vim.opt.statusline    = string.format(
 vim.cmd.colorscheme("default")
 
 -- Search
-vim.opt.incsearch     = true
-vim.opt.ignorecase    = true
-vim.opt.smartcase     = true
+vim.opt.incsearch   = true
+vim.opt.ignorecase  = true
+vim.opt.smartcase   = true
 
 -- File handling
-vim.opt.encoding      = "UTF-8"
-vim.opt.backup        = false
-vim.opt.writebackup   = false
-vim.opt.swapfile      = false
-vim.opt.autoread      = true
+vim.opt.encoding    = "UTF-8"
+vim.opt.backup      = false
+vim.opt.writebackup = false
+vim.opt.swapfile    = false
+vim.opt.autoread    = true
 vim.schedule(function()
   vim.opt.clipboard = vim.env.SSH_TTY and "" or "unnamedplus"
 end)
