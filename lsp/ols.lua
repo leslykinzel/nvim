@@ -1,9 +1,14 @@
 -- lsp.ols
 
 local function get_odin_root()
-  local handle = io.popen("odin root")
+  local handle
+  if vim.fn.has("win64") == 1 then
+    handle = io.popen("odin root 2>nul")
+  else
+    handle = io.popen("odin root 2>/dev/null")
+  end
   if handle == nil then
-    return
+    return ""
   end
   local result = handle:read("*a")
   handle:close()
