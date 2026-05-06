@@ -34,6 +34,7 @@ vim.opt.statusline    = string.format(
   "%{&fileformat == 'dos' ? 'CRLF' : (&fileformat == 'unix' ? 'LF' : '&fileformat')}",
   "%l:%c"
 )
+vim.cmd.colorscheme("default")
 
 -- Search
 vim.opt.incsearch     = true
@@ -46,4 +47,6 @@ vim.opt.backup        = false
 vim.opt.writebackup   = false
 vim.opt.swapfile      = false
 vim.opt.autoread      = true
-vim.opt.clipboard     = vim.env.SSH_TTY and "" or "unnamedplus"
+vim.schedule(function()
+  vim.opt.clipboard = vim.env.SSH_TTY and "" or "unnamedplus"
+end)
