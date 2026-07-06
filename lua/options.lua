@@ -25,14 +25,15 @@ vim.opt.cmdheight     = 1
 vim.opt.cmdwinheight  = 10
 vim.opt.wrap          = false
 vim.opt.smoothscroll  = true
+vim.opt.showcmd       = false
 vim.opt.statusline    = string.format(
-  " %s %s %s %s %s %s ",
-  "%f",
-  "%m",
-  "%=",
-  "%{&fileencoding ? &fileencoding : &encoding}",
-  "%{&fileformat == 'dos' ? 'CRLF' : (&fileformat == 'unix' ? 'LF' : '&fileformat')}",
-  "%l:%c"
+    " %s %s %s %s %s %s ",
+    "%f",
+    "%m",
+    "%=",
+    "%{&fileencoding ? &fileencoding : &encoding}",
+    "%{&fileformat == 'dos' ? 'CRLF' : (&fileformat == 'unix' ? 'LF' : '&fileformat')}",
+    "%l:%c"
 )
 vim.cmd.colorscheme("default")
 
@@ -48,5 +49,5 @@ vim.opt.writebackup = false
 vim.opt.swapfile    = false
 vim.opt.autoread    = true
 vim.schedule(function()
-  vim.opt.clipboard = vim.env.SSH_TTY and "" or "unnamedplus"
+    vim.opt.clipboard = vim.env.SSH_TTY and "" or "unnamedplus"
 end)
