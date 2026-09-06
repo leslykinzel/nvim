@@ -27,7 +27,8 @@ vim.opt.wrap          = false
 vim.opt.smoothscroll  = true
 vim.opt.showcmd       = false
 vim.opt.statusline    = string.format(
-    " %s %s %s %s %s %s ",
+    " %s %s %s %s %s %s %s ",
+    "%{v:lua.get_mode()}",
     "%f",
     "%m",
     "%=",
@@ -51,3 +52,12 @@ vim.opt.autoread    = true
 vim.schedule(function()
     vim.opt.clipboard = vim.env.SSH_TTY and "" or "unnamedplus"
 end)
+
+function get_mode()
+  local mode = vim.api.nvim_get_mode().mode
+  if mode == "n" or mode == "no" then return "NOR" end
+  if mode == "i" then return "INS" end
+  if mode == "s" or mode == "S" or mode == "v" or mode == "V" or mode == "" then return "SEL" end
+  if mode == "c" then return "CMD" end
+  return mode
+end
