@@ -55,9 +55,10 @@ end)
 
 function get_mode()
   local mode = vim.api.nvim_get_mode().mode
-  if mode == "n" or mode == "no" then return "NOR" end
+  if mode == "n" or mode == "no" or mode == "nt" then return "NOR" end
   if mode == "i" then return "INS" end
   if mode == "s" or mode == "S" or mode == "v" or mode == "V" or mode == "" then return "SEL" end
   if mode == "c" then return "CMD" end
+  if mode == "t" then return "TRM" end
   return mode
 end
