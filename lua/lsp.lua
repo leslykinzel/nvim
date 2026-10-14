@@ -1,5 +1,15 @@
 -- lsp
 
+for _, severity in ipairs({ "Error", "Warn", "Info", "Hint" }) do
+  local group = "DiagnosticUnderline" .. severity
+  local hl = vim.api.nvim_get_hl(0, { name = group, link = false })
+
+  hl.underline = nil
+  hl.undercurl = true
+
+  vim.api.nvim_set_hl(0, group, hl)
+end
+
 vim.opt.autocomplete = true
 vim.opt.completeopt  = { "menuone", "noinsert", "noselect" }
 vim.opt.pumheight    = 5
